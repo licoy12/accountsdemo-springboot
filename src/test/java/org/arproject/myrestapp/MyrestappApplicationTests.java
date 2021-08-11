@@ -75,7 +75,7 @@ class MyrestappApplicationTests {
 		Account account = new Account(104L, "Angelico", "Rodriguez", "aruser", "pass", "blue");
 		accountService.deleteAccount(account.getId());
 		verify(accountRepository, times(1)).deleteById(account.getId());
-		log.info("Checking if id 104 still exist: "+ (accountService.getAccountById(104L).isEmpty() ? "DELETED":"EXIST" ));
+		//log.info("Checking if id 104 still exist: "+ (accountService.getAccountById(104L).isEmpty() ? "DELETED":"EXIST" ));
 	}
 	
 	@Test
